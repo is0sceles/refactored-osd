@@ -27,16 +27,24 @@ All relevant components are in src, so this is the file structure of src:
 main.js(entry)
 App.vue
 router
+
 components
 -LandingPage
 --AboutUs
 --Header
+
 -NavBar
+--dropdown
+
 -customComponents
 --input
 --selection
 --button
+
 assets
+-hamburger
+-calendarGlyph
+-messageGlyph
 ```
 
 ```
