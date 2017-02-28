@@ -1,13 +1,16 @@
 <template>
 <div>
-  <h1 v-on:click='redirect("/")'>Do-We</h1>
-  <button v-on:click='redirect("/calendar")'><calendar-glyph></calendar-glyph></button>
-  <button v-on:click='toggleMessages'><message-glyph></message-glyph></button>
-  <button v-on:click='toggleDropdown' ><hamburger></hamburger></button>
+
+  <div class='navbar'>
+    <h1 class='navbarText' v-on:click='redirect("/")'>Do-We</h1>
+    <button class='navbarButton' v-on:click='redirect("/calendar")'><calendar-glyph></calendar-glyph></button>
+    <button class='navbarButton' v-on:click='toggleMessages'><message-glyph></message-glyph></button>
+    <button class='navbarButton' v-on:click='toggleDropdown' ><hamburger></hamburger></button>
+  </div>
   <dropdown :redirect='redirect' v-if='showDropdown'></dropdown>
 </div>
-
 </template>
+
 <script>
   import hamburger from '../../assets/hamburger.vue'
   import messageGlyph from '../../assets/messageGlyph.vue'
@@ -40,7 +43,25 @@
     }
   }
 </script>
+
 <style>
-  
+  .navbar {
+    margin: 0px;
+    display: flex;
+    background: #8D0011;
+    padding-left: 25px;
+  }
+
+  .navbarButton {
+    flex: 1;
+    background: #8D0011;
+    border: 0px;
+  }
+
+  .navbarText{
+    flex: 15;
+    color: white;
+  }
+  /* Rectangle 2: */
 </style>
 
