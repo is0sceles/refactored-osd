@@ -10,6 +10,7 @@
   import CustomButton from '../../../button';
 
   export default {
+    stateless: true,
     components: {
       CustomButton,
       CustomSelection,

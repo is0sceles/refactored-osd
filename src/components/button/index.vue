@@ -3,6 +3,7 @@
 </template>
 <script>
   export default {
+    stateless: true,
     props: ['clickHandler', 'buttonText'],
   };
 </script>

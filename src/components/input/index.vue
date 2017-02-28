@@ -6,6 +6,7 @@
 </template>
 <script>
   export default {
+    stateless: true,
     props: [
       'onChange',
       'placeholder',
