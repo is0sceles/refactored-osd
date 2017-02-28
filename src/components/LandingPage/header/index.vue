@@ -1,9 +1,9 @@
 <template>
   <div> 
-    <custom-button :click-handler='signIn' button-text='Sign in'></custom-button>
+    <custom-button class='secondaryButton' :click-handler='signIn' button-text='Sign in'></custom-button>
     <h1>Do-We</h1>
     <h3>Online Speed-Dating</h3>
-    <landing-signup></landing-signup>
+    <landing-signup :set-gender='setGender' :set-looking-for='setLookingFor' :signup='signup'></landing-signup>
   </div>
 </template>
 <script>
@@ -20,5 +20,10 @@
       CustomButton,
       LandingSignup,
     },
+    props:[
+      'signup',
+      'setGender',
+      'setLookingFor'
+    ],
   };
 </script>
