@@ -69,6 +69,7 @@ assets
   //include website logo
   //NavBar styling
   //dropdown menu styling
+  //implement functionality to alert for unread messages
 
 
 ```
