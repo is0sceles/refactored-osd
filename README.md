@@ -19,3 +19,20 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+##File Structure
+
+All relevant components are in src, so this is the file structure of src:
+
+main.js(entry)
+App.vue
+router
+components
+-LandingPage
+--AboutUs
+--Header
+-NavBar
+-input
+-selection
+-button
+assets
