@@ -8,7 +8,7 @@
 </template>
 <script>
   import LandingSignup from './signup';
-  import CustomButton from '../../button';
+  import CustomButton from '../../customComponents/button';
 
   export default {
     methods: {

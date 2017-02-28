@@ -32,8 +32,9 @@ components
 --AboutUs
 --Header
 -NavBar
--input
--selection
--button
+-customComponents
+--input
+--selection
+--button
 assets
 ```

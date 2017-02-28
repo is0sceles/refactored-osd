@@ -6,8 +6,8 @@
   </div>
 </template>
 <script>
-  import CustomSelection from '../../../selection';
-  import CustomButton from '../../../button';
+  import CustomSelection from '../../../customComponents/selection';
+  import CustomButton from '../../../customComponents/button';
 
   export default {
     stateless: true,

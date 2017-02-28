@@ -8,7 +8,7 @@
 </template>
 <script>
 import HappyPicture from './happyPicture.vue';
-import CustomButton from '../../button'
+import CustomButton from '../../customComponents/button'
 
 export default {
   stateless: true,
