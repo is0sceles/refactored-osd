@@ -1,37 +1,37 @@
 <template>
   <div> 
-    <custom-input label='Username' placeholder='Enter Username' :on-change='setUsername'></custom-input>
-    <custom-input label='Password' placeholder='Enter Password' :on-change='setPassword'></custom-input>
+    I am a : <custom-selection :selections='["Male", "Female"]' :on-change='setGender'></custom-selection>
+    Looking for a <custom-selection  :selections='["Male", "Female"]' :on-change='setLookingFor'></custom-selection>
     <custom-button :click-handler='signup' button-text='Sign Up'></custom-button>
   </div>
 </template>
 <script>
-  import CustomInput from '../../../input';
+  import CustomSelection from '../../../selection';
   import CustomButton from '../../../button';
 
   export default {
     data() {
       return {
-        password: '',
-        username: '',
+        gender: 'Male',
+        lookingFor: 'Male',
       };
     },
     methods: {
       signup() {
-        console.log('username:', this.username, 'password,', this.password);
+        console.log('I am:', this.gender, 'looking for,', this.lookingFor);
       },
-      setPassword(password) {
-        this.password = password;
-        console.log(password);
+      setGender(gender) {
+        this.gender = gender;
+        console.log(gender);
       },
-      setUsername(username) {
-        this.username = username;
-        console.log(username);
+      setLookingFor(lookingFor) {
+        this.lookingFor = lookingFor;
+        console.log(lookingFor);
       },
     },
     components: {
       CustomButton,
-      CustomInput,
+      CustomSelection,
     },
   };
 </script>
