@@ -23,7 +23,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ##File Structure
 
 All relevant components are in src, so this is the file structure of src:
-
+```
 main.js(entry)
 App.vue
 router
@@ -36,3 +36,4 @@ components
 -selection
 -button
 assets
+```
