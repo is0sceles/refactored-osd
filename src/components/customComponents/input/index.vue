@@ -1,14 +1,19 @@
 <template>
   <div> 
     <label>{{label}}</label>
-    <input type="text" :placeholder='placeholder' v-on:change='(event)=>onChange(event.target.value)' />
+    <input type="text" ref='input' :placeholder='placeholder' :value='value' @input='updateValue($event.target.value)'/>
   </div>
 </template>
 <script>
   export default {
-    stateless: true,
+    methods: {
+      updateValue(value) {
+        this.$refs.input.value = value;
+        this.$emit('input', value);
+      },
+    },
     props: [
-      'onChange',
+      'value',
       'placeholder',
       'label',
     ],
