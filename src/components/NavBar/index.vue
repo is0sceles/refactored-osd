@@ -28,6 +28,7 @@
     methods: {
       redirect(path){
         console.log('go to ', path);
+        this.$router.push(path);
       },
       toggleDropdown() {
         this.showDropdown = !this.showDropdown;
