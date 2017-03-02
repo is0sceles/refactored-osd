@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div v-for='days in daysOfTheWeek'>
-      <day></day>
+  <div id='weekComp'>
+    <div v-for='days in daysOfTheWeek' class='weekClass'>
+      <day>{{days}}</day>
     </div>
   </div>
 </template>
@@ -14,8 +14,18 @@
     },
     data () {
       return {
-        daysOfTheWeek: [1,2,3,4,5,6,7]
+        daysOfTheWeek: ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat']
       }
     }
   }
 </script>
+
+<style>
+  div#weekComp {
+    width: 100%;
+    padding-left: 15%;
+  }
+  div.weekClass {
+    display: inline;
+  }
+</style>
