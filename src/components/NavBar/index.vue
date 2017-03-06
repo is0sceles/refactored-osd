@@ -3,7 +3,7 @@
 
   <div class='navbar'>
     <h1 class='navbarText' v-on:click='redirect("/")'>Do-We</h1>
-    <button class='navbarButton' v-on:click='redirect("/calendar")'><calendar-glyph></calendar-glyph></button>
+    <button class='navbarButton' v-on:click='redirect("/user/calendar")'><calendar-glyph></calendar-glyph></button>
     <button class='navbarButton' v-on:click='toggleMessages'><message-glyph></message-glyph></button>
     <button class='navbarButton' v-on:click='toggleDropdown' ><hamburger></hamburger></button>
   </div>
