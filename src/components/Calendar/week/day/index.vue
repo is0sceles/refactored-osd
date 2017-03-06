@@ -3,7 +3,7 @@
     <table class='dayTable'>
       <thead>
         <tr>
-          <th><slot></slot> 20</th>
+          <th><slot></slot></th>
         </tr>
       </thead>
       <tbody>
