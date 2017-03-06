@@ -41,8 +41,8 @@
       messageGlyph,
       calendarGlyph,
       Dropdown,
-    }
-  }
+    },
+  };
 </script>
 
 <style>

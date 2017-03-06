@@ -17,9 +17,9 @@ export default {
     HappyPicture,
   },
   props: [
-    'signup'
-  ]
-}
+    'signup',
+  ],
+};
 
 </script>
 
