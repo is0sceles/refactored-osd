@@ -7,28 +7,28 @@
 </template>
 <script>
   export default {
-    data(){
+    data() {
       return {
         dropdown: [
           {
             name: 'Profile',
-            path: '/user/:userid'
+            path: '/user/:userid',
           },
           {
             name: 'Matches',
-            path: '/user/:userid/matches'
+            path: '/user/:userid/matches',
           },
           {
             name: 'Schedule',
-            path: '/user/:userid/calendar'
+            path: '/user/:userid/calendar',
           },
-        ]
-      }
+        ],
+      };
     },
     props: [
-      'redirect'
-    ]
-  }
+      'redirect',
+    ],
+  };
 </script>
 <style>
   .dropdown {

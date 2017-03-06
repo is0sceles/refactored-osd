@@ -2,7 +2,6 @@
   <div> 
     I am a : <custom-selection :selections='["Male", "Female"]' :on-change='setGender'></custom-selection>
     Looking for a <custom-selection  :selections='["Male", "Female"]' :on-change='setLookingFor'></custom-selection>
-    <custom-button class='primaryButton' :click-handler='signup' button-text='Sign Up'></custom-button>
   </div>
 </template>
 <script>
@@ -15,10 +14,9 @@
       CustomButton,
       CustomSelection,
     },
-    props:[
-      'signup',
+    props: [
       'setGender',
-      'setLookingFor'
+      'setLookingFor',
     ],
   };
 </script>
