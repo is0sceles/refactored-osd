@@ -71,5 +71,19 @@ assets
   //dropdown menu styling
   //implement functionality to alert for unread messages
 
+//signup
+  //need to update the progress header with current stage of signup process
+  //need next and back buttons
+  //implement data persistence of user info
+  //potentially implement store for caching user data on memory
+  //personalInfo
+    //styling
+  //datingPrefs
+    //scheduling block creation needs to be started and completed
+  //imageUpload
+    //everything
+
+    
+
 
 ```

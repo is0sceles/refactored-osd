@@ -1,5 +1,5 @@
 <template>
-  <select v-on:change='event=>onChange(event.target.value)'>
+  <select v-on:input='event=>onChange(event.target.value)'>
     <option v-for='selection in selections'>{{selection}}</option>
   </select>
 </template>

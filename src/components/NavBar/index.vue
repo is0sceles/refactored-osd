@@ -8,6 +8,7 @@
     <button class='navbarButton' v-on:click='toggleDropdown' ><hamburger></hamburger></button>
   </div>
   <dropdown :redirect='redirect' v-if='showDropdown'></dropdown>
+  <router-view></router-view>
 </div>
 </template>
 
@@ -40,8 +41,8 @@
       messageGlyph,
       calendarGlyph,
       Dropdown,
-    }
-  }
+    },
+  };
 </script>
 
 <style>
