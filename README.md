@@ -79,8 +79,10 @@ assets
   //personalInfo
     //styling
   //datingPrefs
-    //
+    //scheduling block creation needs to be started and completed
   //imageUpload
+    //everything
+
     
 
 
