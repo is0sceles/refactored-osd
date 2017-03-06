@@ -23,6 +23,7 @@ export default new Router({
       name: 'user',
       component: NavBar,
       children: [
+<<<<<<< HEAD
         {
           path: 'signup',
           name: 'SignupMain',
@@ -34,12 +35,25 @@ export default new Router({
             }
           ]
         },
+=======
+        // {
+        //   path: 'signup',
+        //   name: 'SignupMain',
+        //   component: SignUp,
+        //   children: [
+        //     {
+        //       path: ':id',
+        //       component: SignupStep
+        //     }
+        //   ]
+        // },
+        {
+          path: 'calendar',
+          name: 'calendar',
+          component: Calendar,
+        }
+>>>>>>> Updated user path to go to calendar
       ]
     },
-    {
-      path: '/calendar',
-      name: 'calendar',
-      component: Calendar,
-    }
   ],
 });
