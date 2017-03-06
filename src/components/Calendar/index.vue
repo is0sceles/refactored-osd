@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h3> {{month[today.getMonth()]}} </h3>
+      <h2 id='monthName'> {{month[today.getMonth()]}} </h2>
       <week></week>
   </div>
 </template>
@@ -8,11 +8,9 @@
 
 <script>
   import week from './week';
-  import Calendar from 'vue-calendar-mobile';
 
   export default {
     components: {
-      Calendar,
       week,
     },
     data () {
@@ -31,3 +29,10 @@
   }
 
 </script>
+
+<style>
+  h2#monthName {
+    font-size: 2em;
+    text-align: center;
+  }
+</style>
