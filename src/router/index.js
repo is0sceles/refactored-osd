@@ -27,16 +27,16 @@ export default new Router({
           children: [
             {
               path: ':step',
-              component: SignupStep
-            }
-          ]
+              component: SignupStep,
+            },
+          ],
         },
         {
           path: 'calendar',
           name: 'calendar',
           component: Calendar,
         },
-      ]
+      ],
     },
   ],
 });
