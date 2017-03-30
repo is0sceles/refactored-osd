@@ -1,14 +1,14 @@
 <template>
   <div>
-      <div v-if="!image">
+      <div v-if="!image.length">
           <h3> {{ header }} </h3>
-          <input type="file" @change="onchange" multiple>
+          <div @dragover.prevent @drop="onDrop" id="dragDrop"></div>
       </div>
       <div v-else>
           <img class="images" :src="image" />
           <br />
-          <button class="danger" @click="removeImage">Remove image</button>
-          <button @click="saveImage">Save image</button>
+          <button @click="removeImage">Go Back / Remove </button>
+          <button @click="continueUpoadProcess">Continue</button>
       </div>
   </div>
 </template>
@@ -17,31 +17,31 @@
 export default {
   data() {
      return {
-      image: '',
-      header: 'Select an image'
+      image: [],
+      header: 'Drag to drop an image'
      }
   },
   methods: {
-    onchange(e) {
+    onDrop: function (e) {
+      e.stopPropagation()
+      e.preventDefault()
+
       let files = e.target.files || e.dataTransfer.files
       if (!files.length) {
         return;
       }
-      console.log('ONCHANGE------> e')
-      console.log(e)
       this.createImage(files)
+      console.log('you just dropped ', files)
     },
     createImage(files) {
       let image = new Image()
       let reader = new FileReader()
-      //save to localStorage
-      let storage = {}
-      storage.images = files
-  
-      this.saveImage(storage)
-      //onload event will fire after reader.readAsDataURL
+
+      //onload will fire after reader.readAsDataURL has vaild file
       reader.onload = (e) => {
          this.image = e.target.result;
+         //save to localStorage to make it accessible. Q: better to save to browser memory than in app alloted memory?
+         localStorage.DOWEprofileImage = this.image
       };
       if (files && files[0].type.match('image.*')) {
         reader.readAsDataURL(files[0]);
@@ -49,9 +49,15 @@ export default {
     },
     removeImage: function (e) {
       this.image = '';
+      if (localStorage) {
+        localStorage.removeItem('DOWEprofileImage')
+      }
     },
-    saveImage: function (obj) {
-      
+    continueUpoadProcess: function () {
+      //give users assurance their intentions were met
+      alert('saved!')
+      console.log('everything is saved')
+      // handle the next process here...
     }
   }
 }
@@ -67,4 +73,11 @@ export default {
     height: 50px;
     width: 50px;
   }
+  #dragDrop {
+    height: 150px;
+    width: 150px;
+    background: url('./dropDiv.png');
+  }
+
 </style>
+
