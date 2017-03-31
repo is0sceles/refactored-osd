@@ -1,8 +1,8 @@
 <template>
   <div>
-      <div v-if="!image.length">
+      <div v-if="!image">
           <h3> {{ header }} </h3>
-          <div @dragover.prevent @drop="onDrop" id="dragDrop"></div>
+          <div @dragover.prevent @drop="onDrop" class="dragDrop"></div>
       </div>
       <div v-else>
           <img class="images" :src="image" />
@@ -17,21 +17,19 @@
 export default {
   data() {
      return {
-      image: [],
-      header: 'Drag to drop an image'
+      image: '',
+      header: 'Drop your image to upload'
      }
   },
   methods: {
     onDrop: function (e) {
-      e.stopPropagation()
       e.preventDefault()
 
       let files = e.target.files || e.dataTransfer.files
       if (!files.length) {
-        return;
+        return
       }
       this.createImage(files)
-      console.log('you just dropped ', files)
     },
     createImage(files) {
       let image = new Image()
@@ -39,16 +37,16 @@ export default {
 
       //onload will fire after reader.readAsDataURL has vaild file
       reader.onload = (e) => {
-         this.image = e.target.result;
+         this.image = e.target.result
          //save to localStorage to make it accessible. Q: better to save to browser memory than in app alloted memory?
          localStorage.DOWEprofileImage = this.image
       };
       if (files && files[0].type.match('image.*')) {
-        reader.readAsDataURL(files[0]);
+        reader.readAsDataURL(files[0])
       }
     },
     removeImage: function (e) {
-      this.image = '';
+      this.image = ''
       if (localStorage) {
         localStorage.removeItem('DOWEprofileImage')
       }
@@ -57,7 +55,7 @@ export default {
       //give users assurance their intentions were met
       alert('saved!')
       console.log('everything is saved')
-      // handle the next process here...
+      // handle the 'continue' process here...
     }
   }
 }
@@ -69,15 +67,11 @@ export default {
     height: 200px;
     width: 200px;
   }
-  .logo {
-    height: 50px;
-    width: 50px;
-  }
-  #dragDrop {
+  .dragDrop {
     height: 150px;
     width: 150px;
-    background: url('./dropDiv.png');
+    background: url('../../../../assets/dropDiv.png');
+    background-size: contain;
   }
-
 </style>
 
