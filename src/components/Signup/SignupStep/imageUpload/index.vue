@@ -1,7 +1,6 @@
 <template>
   <div>
       <div v-if="!image">
-          <h3> {{ header }} </h3>
           <div @dragover.prevent @drop="onDrop" class="dragDrop"></div>
       </div>
       <div v-else>
@@ -18,7 +17,6 @@ export default {
   data() {
      return {
       image: '',
-      header: 'Drop your image to upload'
      }
   },
   methods: {
@@ -68,9 +66,10 @@ export default {
     width: 200px;
   }
   .dragDrop {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     background: url('../../../../assets/dropDiv.png');
+    background-repeat: no-repeat;
     background-size: contain;
   }
 </style>
