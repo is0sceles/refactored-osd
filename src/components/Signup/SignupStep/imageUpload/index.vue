@@ -61,16 +61,19 @@ export default {
 </script>
 
 <style>
+  /** render image after drop  */
   .images {
     height: 200px;
     width: 200px;
   }
+  /** dropbox div */
   .dragDrop {
-    height: 200px;
-    width: 200px;
     background: url('../../../../assets/dropDiv.png');
     background-repeat: no-repeat;
     background-size: contain;
+    border: 2px solid #000;
+    height: 200px;
+    width: 200px;
   }
 </style>
 

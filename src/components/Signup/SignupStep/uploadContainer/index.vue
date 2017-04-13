@@ -1,5 +1,5 @@
 <template> 
-  <div> 
+  <div class="container"> 
     <image-upload class="profileLoader"/>
     <div class="moreImages">
       <image-upload />
@@ -22,18 +22,20 @@
 </script>
 
 <style>
-  .moreImages {
-    display: flex;
-    padding: 15px 15px 15px 15px;
-    margin-left: 20%;
-    margin-right: 20%;
-    border: 2px solid #CCC;
+  /** dropbox container  */
+  .container {
+    border: 2px dashed #C2C;
   }
+  /** main image dropbox  */
   .profileLoader {
     display: block;
-    margin: auto;
-    height: 200px;
-    width: 200px;
-    border: 2px solid #000;
+    margin-left: 33%;
+    
+  }
+  /** dropbox row */
+  .moreImages {
+    padding: 25px 15px 25px 15px;
+    border: 2px solid #CCC;
+    display: flex;
   }
 </style>
