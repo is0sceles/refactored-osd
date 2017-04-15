@@ -80,7 +80,7 @@ assets
     //styling
   //datingPrefs
     //scheduling block creation needs to be started and completed
-  //imageUpload
+  //imageUpload - done.
     //everything
 
     
